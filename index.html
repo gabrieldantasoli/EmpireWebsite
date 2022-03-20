@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empire</title>
 
-    <!-- swiper style-->
+    <!--swiper link style-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
+    
     <!--Font awesome link-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
@@ -39,10 +39,72 @@
 
     <!--Main starts-->
     <section id="home">
-       
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <img src="images/burger-main-1.png" alt="burger">
+            </div>
+            <div>
+               <h2>house burger</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nobis ratione quae consequuntur labore quidem tenetur odit fuga. Nesciunt perferendis obcaecati maxime quae doloribus at ab suscipit neque odit cupiditate!</p>
+               <button>buy now</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <img src="images/burger-main-2.png" alt="burger">
+            </div>
+            <div>
+               <h2>house burger</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nobis ratione quae consequuntur labore quidem tenetur odit fuga. Nesciunt perferendis obcaecati maxime quae doloribus at ab suscipit neque odit cupiditate!</p>
+               <button>buy now</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <img src="images/burger-main-3.png" alt="burger">
+            </div>
+            <div>
+               <h2>house burger</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nobis ratione quae consequuntur labore quidem tenetur odit fuga. Nesciunt perferendis obcaecati maxime quae doloribus at ab suscipit neque odit cupiditate!</p>
+               <button>buy now</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <img src="images/burger-main-4.png" alt="burger">
+            </div>
+            <div>
+               <h2>house burger</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nobis ratione quae consequuntur labore quidem tenetur odit fuga. Nesciunt perferendis obcaecati maxime quae doloribus at ab suscipit neque odit cupiditate!</p>
+               <button>buy now</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next swiper-button"></div>
+        <div class="swiper-button-prev swiper-button"></div>
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
     <!--Main ends-->
 
+    <!--<div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>-->
 
 
 
@@ -54,7 +116,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper(".mainslider", {
+      var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
