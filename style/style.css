@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400&display=swap');
+
+:root{
+    --black: rgb(36, 34, 34);
+    --white: rgb(246, 244, 242);
+    --lightblack: rgb(58, 58, 58);
+    --yellow: rgb(240, 206, 12);
+    --red: rgb(206, 37, 22);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--white);
+    font-family: lemonada,Arial, Helvetica, sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    background-color: var(--lightblack);
+}
+
+/*header style starts*/
+.mainheader{
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: var(--black);
+}
+.mainheader .logo{
+    font-size: 2rem;
+    font-family: lemon,Arial, Helvetica, sans-serif;
+}
+.mainheader .logo i,.mainheader #daymode,.mainheader #bars{
+    font-size: 2rem;
+    color: var(--yellow);
+    margin-right: .7rem;
+}
+.mainheader #bars{
+    display: none;
+}
+.mainheader nav a{
+    position: relative;
+    font-size: 1.4rem;
+    margin-left: .5rem;
+}
+.mainheader nav a.active::before,.mainheader nav a:hover::before{
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--yellow);
+}
+
+/*header style ends*/
+
+section{
+    padding: 2rem 0;
+}
+
+/*main style starts*/
+section#home{
+    width: 100vw;
+    height: 100vh;
+}
+/*main style ends*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:650px){
+    .mainheader #bars{
+        display: initial;
+    }
+    .mainheader nav{
+        position: absolute;
+        top: 100%;left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--black);
+    }
+    .mainheader nav a{
+        padding: .5rem 1rem;
+        font-size: 2rem;
+        margin: 0.5rem;
+    }
+}

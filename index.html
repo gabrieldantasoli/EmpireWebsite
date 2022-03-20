@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empire</title>
+
+    <!-- swiper style-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <!--Font awesome link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- CSS custon link-->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!--Header starts-->
+    <header class="mainheader">
+        <div class="logo">
+            <i class="fas fa-chess-rook"></i>empire
+        </div>
+        <nav>
+            <a href="#home" class="active">home</a>
+            <a href="#about us">about us</a>
+            <a href="#popular">popular</a>
+            <a href="#menu">menu</a>
+            <a href="#delivery">delivery</a>
+            <a href="#contact">contact</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+        <div>
+            <i class="fas fa-sun" id="daymode"></i>
+            <i class="fas fa-bars" id="bars"></i>
+        </div>
+    </header>
+    <!--Header ends-->
+
+    <!--Main starts-->
+    <section id="home">
+       
+    </section>
+    <!--Main ends-->
+
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mainslider", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <!--Interations page-->
+    <script src="script/script.js"></script>
+</body>
+</html>
