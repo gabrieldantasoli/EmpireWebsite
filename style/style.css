@@ -5,6 +5,7 @@
     --black: rgb(36, 34, 34);
     --white: rgb(246, 244, 242);
     --lightblack: rgb(58, 58, 58);
+    --lightwhite: rgb(212, 212, 212);
     --yellow: rgb(240, 206, 12);
     --red: rgb(206, 37, 22);
 }
@@ -31,6 +32,12 @@ html{
 body{
     background-color: var(--lightblack);
 }
+body.active{
+    --white: rgb(36, 34, 34);
+    --black: rgb(246, 244, 242);
+    --lightwhite: rgb(58, 58, 58);
+    --lightblack: rgb(212, 212, 212);
+}
 
 /*header style starts*/
 .mainheader{
@@ -44,6 +51,20 @@ body{
     padding: 1rem 0;
     background-color: var(--black);
     z-index: 10000;
+}
+.mainheader .navbar.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;right: 0;
+    width: 200px;
+    background-color: var(--black);
+    padding-left: 2rem;
+}
+.mainheader .navbar.active a{
+    width: 150px;
+    margin: .5rem 0;
+    text-align: center;
 }
 .mainheader .logo{
     font-size: 2rem;
@@ -81,14 +102,17 @@ section{
 /*main style starts*/
 .swiper-slide{
     width: 100vw;
-    height: calc(100vh - 6rem);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
 }
+.swiper-slide div:nth-child(1){
+    text-align: center;
+}
 #home .swiper-slide img{
-    width: 80%;
+    width: 70%;
     max-width: 500px;
     z-index: 0;
     animation: animate 3s ease-in-out infinite;
@@ -237,7 +261,7 @@ section#about span{
 #menu .swiper-slide .menu{
     width: 300px;
     height: auto;
-    background-color: aliceblue;
+    background-color: var(--white);
 }
 #menu .swiper-slide *{
     color: var(--black);
@@ -265,7 +289,89 @@ section#about span{
     margin-bottom: 4rem;
 }
 
+/*steps style starts*/
+#steps{
+    text-align: center;
+}
+#steps i{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 7rem;
+    font-size: 8rem;
+    color: var(--yellow);
+    border: 2px solid var(--white);
+    margin-bottom: 1rem;
+}
+#steps .steps{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+#steps p{
+    color: var(--white);
+    font-size: 3rem;
+    font-family: lemon;
+}
+#steps h1{
+    font-size: 3rem;
+    color: var(--yellow);
+}
+#blogs h1{
+    font-size: 3rem;
+}
+#blogs h1 span{
+    color: var(--yellow);
+}
 
+/*blogs style starts*/
+#blogs{
+    text-align: center;
+}
+#blogs .blogs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#blogs .blogs .blog{
+    margin: 1rem;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid white;
+}
+.blog img{
+    margin-top: 1rem;
+    width: 90%;
+}
+.blog .info{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info h2{
+    font-size: 1.5rem;
+    color: var(--yellow);
+}
+.info button{
+    color: var(--white);
+    background-color: transparent;
+    padding: .5rem;
+    text-decoration: underline;    
+}
+.info button:hover{
+    background-color: var(--yellow);
+    color: var(--black);
+    text-decoration: none;
+}
 
 
 
@@ -318,7 +424,7 @@ section#about span{
     }
     .mainheader nav{
         position: absolute;
-        top: 100%;left: 0;
+        top: 100%;
         width: 100%;
         display: none;
         flex-direction: column;
