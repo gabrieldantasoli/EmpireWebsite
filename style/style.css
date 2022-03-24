@@ -100,7 +100,7 @@ section{
 }
 
 /*main style starts*/
-.swiper-slide{
+#home .swiper-slide,#menu .swiper-slide{
     width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -206,7 +206,7 @@ section#about span{
     align-items: center;
     width: 80%;
     max-width: 300px;
-    height: 400px;
+    height: 420px;
     margin: 0 3rem 4rem 3rem;
     background-color: var(--lightblack);
     opacity: 0.7;
@@ -240,23 +240,29 @@ section#about span{
 
 
 /*menu section starts*/
-#menu{
+section#menu{
     text-align: center;
-    height: auto;
+    min-height: 80vh;
+}
+#menu .swiper-wrapper{
+    min-height: 80vh;
+    background-color: brown;
 }
 #menu .swiper-slide{
     width: auto;
-    height: auto;
+    min-height: 80vh;
     flex-direction: column;
 }
 #menu .swiper-slide .divmenu{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100vw;
-    height: auto;
+    min-height: 80vh;
     gap: .5rem;
     max-width: 640px;
     flex-wrap: wrap;
+    margin-bottom: 4rem;
 }
 #menu .swiper-slide .menu{
     width: 300px;
@@ -285,9 +291,7 @@ section#about span{
 #menu .swiper-slide h1{
     color: var(--red);
 }
-#menu .swiper-wrapper{
-    margin-bottom: 4rem;
-}
+
 
 /*steps style starts*/
 #steps{
@@ -373,7 +377,68 @@ section#about span{
     text-decoration: none;
 }
 
-
+/*contact section starts*/
+#contact{
+    text-align: center;
+}
+#contact h1{
+    font-size: 3rem;
+    color: var(--yellow);
+}
+#contact > div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+#contact iframe{
+    width: 40vw;
+    height: 30vw;
+}
+#contact form{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+#contact input{
+    margin: .5rem 0 .5rem 4rem;
+    width: calc(100% - 5rem);
+    max-width: 500px;
+    color: var(--black);
+    padding: .3rem;
+    background-color: var(--white);
+}
+#contact button{
+    background-color: var(--white);
+    padding: .6rem 1rem;
+    width: 120px;
+    color: var(--black);
+    margin: 2rem 0 .5rem 4rem;
+}
+#contact button:hover{
+    background-color: var(--yellow);
+}
+#contact label{
+    color: var(--yellow);
+    font-size: 1.5rem;
+}
+.footer h3{
+    color: var(--red);
+    font-size: 1rem;
+}
+.footer{
+    padding: 1rem;
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+.footer p{
+    color: var(--black);
+}
 
 
 
@@ -436,5 +501,28 @@ section#about span{
         padding: .5rem 1rem;
         font-size: 2rem;
         margin: 0.5rem;
+    }
+}
+@media (max-width:900px){
+    #contact > div{
+        flex-direction: column;
+    }
+    #contact iframe{
+        width: 70vw;
+        height: 50vw;
+    }
+    #contact form{
+        margin-top: 3rem;
+        width: 100%;
+    }
+    #contact button{
+        margin: auto;
+    }
+    #contact label{
+        font-size: 2rem;
+    }
+    #contact input{
+        width: 90%;
+        margin: .6rem auto;
     }
 }
